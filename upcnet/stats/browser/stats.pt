@@ -1,0 +1,2 @@
+{'size': <span tal:replace="view/getSize"/>, 'inactivity': <span tal:replace="view/getInactivitat"/>}
+

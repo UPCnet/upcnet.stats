@@ -1,0 +1,15 @@
+README.txt
+setup.py
+upcnet/__init__.py
+upcnet.stats.egg-info/PKG-INFO
+upcnet.stats.egg-info/SOURCES.txt
+upcnet.stats.egg-info/dependency_links.txt
+upcnet.stats.egg-info/entry_points.txt
+upcnet.stats.egg-info/namespace_packages.txt
+upcnet.stats.egg-info/not-zip-safe
+upcnet.stats.egg-info/requires.txt
+upcnet.stats.egg-info/top_level.txt
+upcnet/stats/__init__.py
+upcnet/stats/tests.py
+upcnet/stats/browser/__init__.py
+upcnet/stats/browser/stats.py

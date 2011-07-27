@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="fundaciocat.theme">
+   <browser:page
+	for="*"
+	name="stats"
+	class=".stats.StatsView"
+	permission="zope2.View"
+   /> 
+   <subscriber for="Products.PluggableAuthService.interfaces.events.IUserLoggedInEvent"
+              handler=".stats.userLoginHandler" />
+</configure>
