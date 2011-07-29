@@ -4,7 +4,7 @@
     i18n_domain="fundaciocat.theme">
    <browser:page
 	for="*"
-	name="stats"
+	name="gwc_stats_info"
 	class=".stats.StatsView"
 	permission="zope2.View"
    /> 
