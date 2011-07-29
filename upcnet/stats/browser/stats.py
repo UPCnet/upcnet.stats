@@ -50,8 +50,10 @@ class StatsView(BrowserView):
             isodate = self.properties.last_login
             dt = DateTime(isodate)
             last_access = dt.timeTime()
+            # Restem la diferecia de les dates en segons i obtenim els minuts /60
             minutes = int((DateTime().timeTime() - last_access)/60.0)
-            days = int(minutes/86400.0)
+            # Els dies son els minuts per hora i les hores per dia
+            days = int(minutes/60/24)
 
         return  days
 
