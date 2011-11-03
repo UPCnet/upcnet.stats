@@ -1,5 +1,9 @@
 README.txt
 setup.py
+docs/HISTORY.txt
+docs/INSTALL.txt
+docs/LICENSE.GPL
+docs/LICENSE.txt
 upcnet/__init__.py
 upcnet.stats.egg-info/PKG-INFO
 upcnet.stats.egg-info/SOURCES.txt
@@ -10,6 +14,10 @@ upcnet.stats.egg-info/not-zip-safe
 upcnet.stats.egg-info/requires.txt
 upcnet.stats.egg-info/top_level.txt
 upcnet/stats/__init__.py
+upcnet/stats/configure.zcml
 upcnet/stats/tests.py
+upcnet/stats/version.txt
 upcnet/stats/browser/__init__.py
+upcnet/stats/browser/configure.zcml
+upcnet/stats/browser/stats.pt
 upcnet/stats/browser/stats.py

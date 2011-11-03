@@ -66,20 +66,13 @@ class StatsView(BrowserView):
 
     def getSize(self):
         """
-            Returns the size of the plone instance
+            Returns the size of the plone instance in bytes
         """
         size = 0
         portal_catalog = getToolByName (self.context, 'portal_catalog')
-        type_filter = ['Folder', 'Large Plone Folder']
-        type_search = portal_catalog.searchResults()
+        type_search = portal_catalog.searchResults(Lang='all')
         if type_search:
-            for f in type_search:
-                try:
-                    o = f.getObject()
-                    if hasattr(o, 'get_size'):
-                        size += int(o.get_size())
-                except:
-                    size = 0
+            size = sum([a.get_size for a in type_search])
         return size
 
     def human_size(self, num):

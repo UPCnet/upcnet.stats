@@ -6,7 +6,7 @@
 	for="*"
 	name="gwc_stats_info"
 	class=".stats.StatsView"
-	permission="zope2.View"
+	permission="cmf.ManagePortal"
    /> 
    <subscriber for="Products.PluggableAuthService.interfaces.events.IUserLoggedInEvent"
               handler=".stats.userLoginHandler" />

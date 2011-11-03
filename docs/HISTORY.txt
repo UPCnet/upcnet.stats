@@ -1,7 +1,14 @@
 Changelog
 =========
 
-1.0dev (unreleased)
+
+1.1 (2011-11-3)
+---------------
+
+- Només permetre a Managers accedir a les estadistiques
+- Fer servir un index del cataleg per obtenir la mida de manera òptima
+
+1.0 (2011-10-10)
 -------------------
 
 - Initial release

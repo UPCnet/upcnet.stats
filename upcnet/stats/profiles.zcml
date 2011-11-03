@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="upc.genwebupc">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Stats for Genweb"
+      directory="profiles/default"
+      description='Extension profile for the Stats for genweb package'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>
