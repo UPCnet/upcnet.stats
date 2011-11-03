@@ -15,9 +15,11 @@ upcnet.stats.egg-info/requires.txt
 upcnet.stats.egg-info/top_level.txt
 upcnet/stats/__init__.py
 upcnet/stats/configure.zcml
+upcnet/stats/profiles.zcml
 upcnet/stats/tests.py
 upcnet/stats/version.txt
 upcnet/stats/browser/__init__.py
 upcnet/stats/browser/configure.zcml
 upcnet/stats/browser/stats.pt
 upcnet/stats/browser/stats.py
+upcnet/stats/profiles/default/catalog.xml
