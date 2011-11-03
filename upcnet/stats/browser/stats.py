@@ -70,18 +70,8 @@ class StatsView(BrowserView):
         """
         size = 0
         portal_catalog = getToolByName (self.context, 'portal_catalog')
-        type_search = portal_catalog.searchResults(Lang='all')
+        type_search = portal_catalog.searchResults(Language='all')
         if type_search:
             size = sum([a.get_size for a in type_search])
         return size
 
-    def human_size(self, num):
-        """
-            Returns de size in human readable format
-        """
-        # No s'utilitza en cap lloc, pero pot ser interesant
-        for x in ['bytes', 'KB', 'MB', 'GB', 'TB']:
-            if num < 1024.0:
-                return "%3.1f %s" % (num, x)
-            num /= 1024.0
-        return num
