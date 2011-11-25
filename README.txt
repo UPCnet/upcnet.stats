@@ -1,6 +1,4 @@
-Introduction
+Introducció
 ============
 
-
-
-This product may contain traces of nuts.
+Aquest producte pot contindre troços d'ous.
