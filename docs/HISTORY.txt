@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2 (unreleased)
+----------------
+- Fixed wrong namespace
+
 1.1 (2011-11-25)
 ----------------
 - Només permetre a Managers accedir a les estadistiques

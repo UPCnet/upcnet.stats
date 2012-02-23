@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1'
+version = '1.2'
 
 setup(name='upcnet.stats',
       version=version,
@@ -21,7 +21,7 @@ setup(name='upcnet.stats',
       url='https://github.com/upcnet/upcnet.stats',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['upcnet', 'upcnet.stats'],
+      namespace_packages=['upcnet'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
