@@ -4,11 +4,12 @@ from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from DateTime import DateTime
 
-from zope.app.component.hooks import getSite
+from zope.component.hooks import getSite
 
 from plone.app.controlpanel.mail import IMailSchema
 
-def userLoginHandler (event):
+
+def userLoginHandler(event):
     """
         Handler que captura els events IUserLoggedInEvent i actualitza la data
         de l'ultim login.
@@ -32,15 +33,15 @@ class StatsView(BrowserView):
         self.context = context
         self.request = request
         self.properties = getToolByName(context,'portal_properties').site_properties
-               
+
     def getContactEmail(self):
         """
             Returns the contact email
         """
         portal = getToolByName(self,'portal_url').getPortalObject()
-        mail = IMailSchema(portal)         
+        mail = IMailSchema(portal)
         return mail.email_from_address
-        
+
     def getInactivitat(self):
         """
             Returns the days from the last login.
