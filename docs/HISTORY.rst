@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.2 (2014-08-08)
 ----------------
  * Fix packaging and prepare to release [Victor Fernandez de Alba]
  * Compat 4.3 [Victor Fernandez de Alba]
