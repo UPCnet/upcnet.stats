@@ -3,7 +3,9 @@ Changelog
 
 1.2 (unreleased)
 ----------------
-- Fixed wrong namespace
+ * Fix packaging and prepare to release [Victor Fernandez de Alba]
+ * Compat 4.3 [Victor Fernandez de Alba]
+ * Fixed wrong namespace
 
 1.1 (2011-11-25)
 ----------------
