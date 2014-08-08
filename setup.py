@@ -4,17 +4,22 @@ import os
 
 version = '1.2'
 
+README = open("README.rst").read()
+HISTORY = open(os.path.join("docs", "HISTORY.rst")).read()
+
 setup(name='upcnet.stats',
       version=version,
       description="",
-      long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
-      # Get more strings from
-      # http://pypi.python.org/pypi?:action=list_classifiers
+      long_description=README + "\n" + HISTORY,
       classifiers=[
-        "Framework :: Plone",
-        "Programming Language :: Python",
-        ],
+          "Environment :: Web Environment",
+          "Framework :: Plone",
+          "Operating System :: OS Independent",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 2.6",
+          "Programming Language :: Python :: 2.7",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+      ],
       keywords='',
       author='UPCnet Plone Team',
       author_email='plone.team@upcnet.es',
@@ -26,11 +31,9 @@ setup(name='upcnet.stats',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
       ],
       entry_points="""
       # -*- Entry points: -*-
-
       [z3c.autoinclude.plugin]
       target = plone
       """,
