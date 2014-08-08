@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.3 (unreleased)
+----------------
+
+- Nothing changed yet.
+
+
 1.2 (2014-08-08)
 ----------------
  * Fix packaging and prepare to release [Victor Fernandez de Alba]
