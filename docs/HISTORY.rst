@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.3 (unreleased)
+1.3 (2023-07-07)
 ----------------
 
-- Nothing changed yet.
-
+* Apply json format to genweb stats [Alberto Durán]
 
 1.2 (2014-08-08)
 ----------------
