@@ -2,12 +2,19 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="fundaciocat.theme">
-   <browser:page
+   <!-- <browser:page
 	for="*"
 	name="gwc_stats_info"
 	class=".stats.StatsView"
 	permission="cmf.ManagePortal"
-   /> 
+   /> -->
+   <browser:page
+      name="gwc_stats_info"
+      for="*"
+      class=".stats.genwebStats"
+      permission="cmf.ManagePortal"
+      />
+
    <subscriber for="Products.PluggableAuthService.interfaces.events.IUserLoggedInEvent"
               handler=".stats.userLoginHandler" />
 </configure>

@@ -7,6 +7,7 @@ from DateTime import DateTime
 from zope.component.hooks import getSite
 
 from plone.app.controlpanel.mail import IMailSchema
+import json
 
 
 def userLoginHandler(event):
@@ -76,3 +77,53 @@ class StatsView(BrowserView):
             size = sum([a.get_size for a in type_search])
         return size
 
+
+class genwebStats(BrowserView):
+    """
+    Retorna algunes estadístiques per al GWManager.
+    """
+    
+    def getSize(self):
+        """
+            Returns the size of the plone instance in bytes
+        """
+        size = 0
+        portal_catalog = getToolByName (self.context, 'portal_catalog')
+        type_search = portal_catalog.searchResults(Language='all')
+        if type_search:
+            size = sum([a.get_size for a in type_search])
+        return size
+    
+    def getContactEmail(self):
+        """
+            Returns the contact email
+        """
+        portal = getToolByName(self,'portal_url').getPortalObject()
+        mail = IMailSchema(portal)
+        return mail.email_from_address
+
+    def getInactivitat(self):
+        """
+            Returns the days from the last login.
+        """
+        self.properties = getToolByName(self.context,'portal_properties').site_properties
+        days = -1
+        if self.properties.hasProperty('last_login') == 1 :
+            isodate = self.properties.last_login
+            dt = DateTime(isodate)
+            last_access = dt.timeTime()
+            # Restem la diferecia de les dates en segons i obtenim els minuts /60
+            minutes = int((DateTime().timeTime() - last_access)/60.0)
+            # Els dies son els minuts per hora i les hores per dia
+            days = int(minutes/60/24)
+
+        return  days
+
+    def __call__(self):
+        stats = {
+            "title": self.context.Title(),
+            "size": self.getSize(),
+            "inactivity": self.getInactivitat(),
+            "email": self.getContactEmail()    
+        }
+        return json.dumps(stats, indent=4)
